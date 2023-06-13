@@ -19,6 +19,17 @@ reversedString(String reverseThis){
 }
 
 
+//Problem 9
+//Write a program that calculates the sum of all elements in an array of integers.
+sumOfArray(List<int> array){
+  int res = 0;
+  for (var i=0; i<array.length; i++){
+    res = res + array[i];
+  }
+  print(res);
+}
+
+
 
 //Problem 17
 //Write a program that finds the missing number in a given array of consecutive integers from 1 to n, where only one number is missing.
