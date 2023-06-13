@@ -18,12 +18,14 @@ reversedString(String reverseThis){
   print(reverseThis.split('').reversed.join());
 }
 
+
+
 //Problem 17
 //Write a program that finds the missing number in a given array of consecutive integers from 1 to n, where only one number is missing.
 findMissingInt(List<int> intList){
           for (var i = 0; i < intList.length; i++) {
           if(i+1==intList[i]){
-            print(intList[i]);
+            print('All are present');
           } else { 
           print (' ${i+1} is missing');
             }
