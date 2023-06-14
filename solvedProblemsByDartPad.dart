@@ -1,6 +1,7 @@
 // if i've imported 'dart:io' i could read any int from console in dart pad or in vs code but in dart pad its doesn't worked, 
 //so i've pasted 5 to function u can test any number in first problem, 
 //i will add only function for every problem, then u can test every solved problem by pasting name of function and requests of them...
+import 'dart:math' as math;
 
 void main() {
 evenOrOdd(5);
@@ -27,6 +28,26 @@ sumOfArray(List<int> array){
     res = res + array[i];
   }
   print(res);
+}
+
+//Problem 10
+//Write a program that finds the maximum and minimum values in an array of integers.
+
+// Min value
+minInt(List<int> arr ){
+  int res = arr[0];
+  for( var i = 0; i<arr.length; i++){
+    res = math.min(arr[i],res);
+}
+print(res);
+}
+//Max value
+maxInt(List<int> arr ){
+  int res = arr[0];
+  for( var i = 0; i<arr.length; i++){
+    res = math.max(arr[i],res);
+}
+print(res);
 }
 
 
