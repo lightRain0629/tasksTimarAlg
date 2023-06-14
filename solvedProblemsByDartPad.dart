@@ -31,6 +31,23 @@ leapYear(int year){
   }
 }
 
+//Problem 6
+//Write a program that checks whether a given string is a palindrome or not.
+//A palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward.
+palindromeWord(String str){
+  List list = str.split('');  
+  bool res = false;
+  
+  for (var i=0; i<list.length; i++){
+    if (list[i]== list.reversed.toList()[i]){
+      res = true;
+    } else {
+      res = false;
+    }
+  }
+  print(res);
+}
+
 //Problem 9
 //Write a program that calculates the sum of all elements in an array of integers.
 sumOfArray(List<int> array){
