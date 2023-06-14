@@ -19,6 +19,17 @@ reversedString(String reverseThis){
   print(reverseThis.split('').reversed.join());
 }
 
+//Problem 4
+// Write a program that determines whether a given year is a leap year or not. 
+//A leap year is divisible by 4, but not divisible by 100, unless it is also divisible by 400.
+leapYear(int year){
+ int res = year % 4;
+  if (res == 0){
+    print('Leap year');
+  } else {
+    print ('Is not leap year');
+  }
+}
 
 //Problem 9
 //Write a program that calculates the sum of all elements in an array of integers.
