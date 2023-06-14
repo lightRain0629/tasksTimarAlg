@@ -98,6 +98,19 @@ countVovelsAndConsonants(String countMe){
   print('consonants $cCount');
 }
 
+//Problem 13
+//Write a program that finds the largest word in a sentence. 
+//The program should ignore punctuation marks and consider words as sequences of characters separated by spaces.
+largestWord(String sentence){
+  List separatedWords = sentence.split(' ');
+  int res = separatedWords[0].length;
+  for ( var i=1; i<separatedWords.length; i++){
+    
+    res = math.max(separatedWords[i].length, res);
+  }
+  print(res);
+}
+
 
 
 //Problem 17
