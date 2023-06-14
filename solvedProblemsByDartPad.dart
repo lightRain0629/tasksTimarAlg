@@ -50,6 +50,26 @@ maxInt(List<int> arr ){
 print(res);
 }
 
+//Problem 11
+//Write a program that takes a string as input and counts the number of vowels and consonants in it.
+countVovelsAndConsonants(String countMe){
+  String withoutSpace = countMe.replaceAll(' ','').toLowerCase();
+  List codeUnits = withoutSpace.codeUnits;
+  int vCount = 0;
+  int cCount = 0;
+  
+  for (var i = 0; i<codeUnits.length; i++){
+   if (codeUnits[i]==111 || codeUnits[i]==117 || codeUnits[i]== 105 
+       || codeUnits[i]== 101 || codeUnits[i]== 97){
+     vCount++;
+   } else {
+     cCount++;
+   }
+  }
+  print('vovels $vCount');
+  print('consonants $cCount');
+}
+
 
 
 //Problem 17
