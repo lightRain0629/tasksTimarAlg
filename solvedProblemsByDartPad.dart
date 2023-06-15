@@ -13,11 +13,31 @@ evenOrOdd(int a){
  a.isEven? print('Its even'): print('Its odd');
 }
 
+
+//Problem 2 
+//Write a program that generates the Fibonacci series up to a given number of terms. 
+//The Fibonacci series starts with 0 and 1, and each subsequent term is the sum of the previous two terms.
+fibonachiSeries(int n){
+ int fib1 = 1;
+int fib2 = 1;
+  int i = 0;
+  int fibSum = 0;
+  while (i<n-2){
+        fibSum = fib1 + fib2;
+    fib1 = fib2;
+    fib2 = fibSum;
+    i = i + 1;
+    print(fib2);
+  }
+}
+
 //Problem 3
 //Write a program that takes a string as input and reverses it. For example, if the input is "hello," the program should output "olleh."
 reversedString(String reverseThis){
   print(reverseThis.split('').reversed.join());
 }
+
+
 
 //Problem 4
 // Write a program that determines whether a given year is a leap year or not. 
