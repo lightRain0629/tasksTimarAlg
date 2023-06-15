@@ -51,6 +51,23 @@ leapYear(int year){
   }
 }
 
+//Problem 5 
+//Write a program that prints all the prime numbers between 1 and a given number. 
+//A prime number is a number greater than 1 that has no positive divisors other than 1 and itself.
+primeNumber(int pNum){
+  int k = 0;
+  for (var i = 2 ; i<pNum; i++){
+    if (pNum % i==0){
+      k++;
+    }
+  }
+  if (k==0){
+    print('Its prime number');
+  } else {
+    print('Its not prime number');
+  }
+}
+
 //Problem 6
 //Write a program that checks whether a given string is a palindrome or not.
 //A palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward.
@@ -66,6 +83,38 @@ palindromeWord(String str){
     }
   }
   print(res);
+}
+
+//Problem 7
+//Write a program that calculates the factorial of a given number. 
+//The factorial of a non-negative integer n is the product of all positive integers less than or equal to n.
+findFactorial(int n){
+  int res = 1;
+  for (var i=1; i<=n; i++){
+    res = res * i;
+  }
+  print(res);
+}
+
+//Problem 8
+//Implement a sorting algorithm such as bubble sort, selection sort, or insertion sort to sort an array of integers in ascending order.
+
+//Buble sort
+bubleSort(List<int> arr){
+  int n = arr.length;
+  int temp = 0;
+  
+ for(int i=0; i < n; i++){  
+  for(int j=1; j < (n-i); j++){  
+   if(arr[j-1] > arr[j]){  
+      temp = arr[j-1];  
+       arr[j-1] = arr[j];  
+           arr[j] = temp;  
+                         }  
+                          
+                 }  
+         }  
+  print(arr);
 }
 
 //Problem 9
