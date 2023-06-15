@@ -167,6 +167,17 @@ countVovelsAndConsonants(String countMe){
   print('consonants $cCount');
 }
 
+//Problem 12
+//Write a program that calculates the sum of the digits of a given positive integer.
+sumDigit(int justInt){
+  List digitList = justInt.toString().split('');
+  dynamic res = 0;
+  for (var i = 0; i<digitList.length; i++){
+    res += int.parse(digitList[i]);
+  }
+  print(res);
+}
+
 //Problem 13
 //Write a program that finds the largest word in a sentence. 
 //The program should ignore punctuation marks and consider words as sequences of characters separated by spaces.
