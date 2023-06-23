@@ -191,7 +191,72 @@ largestWord(String sentence){
   print(res);
 }
 
+//Problem 14
+//Write a program that finds and prints all duplicate elements in an array of integers.
+duplicate(List<int> a) {
+  List b = [];
+  for (var i = 0; i < a.length; i++) {
+    for (var j = i + 1; j < a.length; j++) {
+      if (a[i] == a[j] && !b.contains(a[i])) {
+        b.add(a[i]);
+      }
+    }
+  }
+  print (b);
+}
 
+//Problem 15
+//Write a program that checks whether a given number is an Armstrong number or not. 
+//An Armstrong number is a number that is equal to the sum of its own digits each raised to the power of the number of digits.
+armstrong(int a) {
+  String b = a.toString();
+  num c = 0;
+  for (var i = 0; i < b.length; i++) {
+    c += math.pow(int.parse(b[i]), b.length);
+  }
+  if (c == a) {
+    print ('armstrong');
+  } else {
+    print ('not armstrong');
+  }
+}
+
+
+
+//Problem 16 
+//Write a program that checks whether two given strings are anagrams or not. 
+//Anagrams are words or phrases formed by rearranging the letters of another word or phrase.
+anagrams(String a, String b) {
+  String ans = '';
+  List aa = a.toLowerCase().split('');
+  List bb = b.toLowerCase().split('');
+  for (var i = 0; i < aa.length; i++) {
+    for (var j = 0; j < bb.length; j++) {
+      if (aa[i] == ' ' ||
+          aa[i] == ',' ||
+          aa[i] == '!' ||
+          aa[i] == '?' ||
+          aa[i] == '.' ||
+          aa[i] == ';') {
+        aa.remove(aa[i]);
+      }
+      if (bb[j] == ' ' ||
+          bb[j] == ',' ||
+          bb[j] == '!' ||
+          bb[j] == '?' ||
+          bb[j] == '.' ||
+          bb[j] == ';') {
+        bb.remove(bb[j]);
+      }
+      if (aa.length == bb.length && bb.contains(aa[i]) == aa.contains(bb[i])) {
+        ans = 'Anagrams';
+      } else {
+        ans = 'not Anagrams';
+      }
+    }
+  }
+  print (ans);
+}
 
 //Problem 17
 //Write a program that finds the missing number in a given array of consecutive integers from 1 to n, where only one number is missing.
